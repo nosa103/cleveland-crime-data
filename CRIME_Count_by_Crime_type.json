@@ -1,0 +1,76 @@
+{
+    "name": "Crimes",
+    "children": [
+        {
+            "name": "PUBLIC DISORDER",
+            "children": [
+                {
+                    "name": "Anti-social behaviour",
+                    "size": "83969"
+                },
+                {
+                    "name": "Public order",
+                    "size": "19394"
+                },
+                {
+                    "name": "Vehicle crime",
+                    "size": "9745"
+                },
+                {
+                    "name": "Drugs",
+                    "size": "6038"
+                },
+                {
+                    "name": "Other crime",
+                    "size": "5612"
+                }
+            ]
+        },
+        {
+            "name": "CRIME AGAINST PROPERTY",
+            "children": [
+                {
+                    "name": "Shoplifting",
+                    "size": "16220"
+                },
+                {
+                    "name": "Other theft",
+                    "size": "14825"
+                },
+                {
+                    "name": "Burglary",
+                    "size": "13220"
+                },
+                {
+                    "name": "Robbery",
+                    "size": "1939"
+                },
+                {
+                    "name": "Bicycle theft",
+                    "size": "1844"
+                },
+                {
+                    "name": "Theft from the person",
+                    "size": "1180"
+                }
+            ]
+        },
+        {
+            "name": "HARMFUL CRIME",
+            "children": [
+                {
+                    "name": "Violence and sexual offences",
+                    "size": "79080"
+                },
+                {
+                    "name": "Criminal damage and arson",
+                    "size": "27951"
+                },
+                {
+                    "name": "Possession of weapons",
+                    "size": "1735"
+                }
+            ]
+        }
+    ]
+}

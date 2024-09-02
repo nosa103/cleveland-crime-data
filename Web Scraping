@@ -1,0 +1,99 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMD48yUTQn2oVfgP7Lhw8vh",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/nosa103/cleveland-crime-data/blob/main/Web%20Scraping\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "m558fbtH0Byb"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        " ------------------------------- **WEB SCRAPING**--------------------------"
+      ],
+      "metadata": {
+        "id": "FcdeeHq10Svh"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import requests\n",
+        "from bs4 import BeautifulSoup\n",
+        "\n",
+        "page_to_scrape = requests.get ('http://quotes.toscrape.com')\n",
+        "soup = BeautifulSoup(page_to_scrape.text, 'html.parser')\n",
+        "quote = soup.findAll('span', attrs={'class':'text'})\n",
+        "author = soup.findAll('small', attrs={'class': 'author'})\n",
+        "\n",
+        "for quote, author in zip(quote, author):\n",
+        "  print(quote.text +'.' + author.text)\n",
+        "for author in author:\n",
+        "  print(author.text)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IIP1dm7sxq01",
+        "outputId": "71bdf447-391c-4456-e28c-697bbbc8975c"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”.Albert Einstein\n",
+            "“It is our choices, Harry, that show what we truly are, far more than our abilities.”.J.K. Rowling\n",
+            "“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”.Albert Einstein\n",
+            "“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”.Jane Austen\n",
+            "“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”.Marilyn Monroe\n",
+            "“Try not to become a man of success. Rather become a man of value.”.Albert Einstein\n",
+            "“It is better to be hated for what you are than to be loved for what you are not.”.André Gide\n",
+            "“I have not failed. I've just found 10,000 ways that won't work.”.Thomas A. Edison\n",
+            "“A woman is like a tea bag; you never know how strong it is until it's in hot water.”.Eleanor Roosevelt\n",
+            "“A day without sunshine is like, you know, night.”.Steve Martin\n",
+            "Steve Martin\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# New section"
+      ],
+      "metadata": {
+        "id": "6ZXb3fh00JRp"
+      }
+    }
+  ]
+}
